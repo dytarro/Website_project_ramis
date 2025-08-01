@@ -1,0 +1,335 @@
+/* --- Globale Stijlen & Variabelen --- */
+:root {
+    --bg-color: #F9F9F9;
+    --text-color: #333333;
+    --primary-accent: #DC2626;
+    --secondary-accent: #EAB308;
+    --font-heading: 'Merriweather', serif;
+    --font-body: 'Lato', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    margin: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; text-align: center; margin-bottom: 40px; }
+h3 { font-size: 1.5em; }
+
+p, a, li {
+    font-family: var(--font-body);
+    font-weight: 400;
+}
+
+a {
+    color: var(--primary-accent);
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.button-primary {
+    display: inline-block;
+    background-color: var(--primary-accent);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.button-primary:hover {
+    background-color: #b91c1c; /* 10% donkerder rood */
+}
+
+/* --- Header --- */
+header {
+    background-color: white;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.logo {
+    height: 80px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.flag-icon {
+    height: 24px;
+    border: 2px solid #eee; /* Lichte rand voor een subtiel effect */
+    border-radius: 4px; /* Afgeronde hoeken */
+}
+
+/* --- Hero Section --- */
+#hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background: url('../assets/hero-background.jpg') no-repeat center center/cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-content h1 { font-size: 3em; color: white; }
+.hero-content h2 { font-size: 1.5em; color: white; text-align: center; margin-bottom: 20px; }
+.hero-content p { font-size: 1.2em; }
+
+
+/* --- Aanbiedingen Section --- */
+#aanbiedingen .gazetka-container img {
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* --- Click & Collect Section --- */
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    padding: 20px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+.product-card h3 {
+    margin-bottom: 10px;
+}
+
+.product-card .price {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--primary-accent);
+    margin-bottom: 20px;
+}
+
+/* --- Traditie Hub Section --- */
+#traditie {
+    position: relative;
+    padding: 100px 0;
+    text-align: center;
+    color: var(--text-color);
+    background: url('../assets/traditie-banner.jpg') no-repeat center center/cover;
+}
+
+.traditie-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(234, 179, 8, 0.7);
+}
+
+.traditie-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.traditie-content h2, .traditie-content h3 {
+    color: #333; /* Donkerdere tekst voor leesbaarheid op gouden achtergrond */
+}
+
+/* --- Contact Section --- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+    border-radius: 4px;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #eaeaea;
+    padding: 40px 0;
+    background-image: url('../assets/wycinanki-pattern.svg');
+    background-repeat: repeat;
+    background-size: auto;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(249, 249, 249, 0.9);
+    z-index: 1;
+}
+
+.footer-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+}
+
+/* --- Pop-up Modal --- */
+.modal-hidden {
+    display: none;
+}
+
+.modal-visible {
+    display: flex;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 40px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #333;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* --- Media Queries (Responsiveness) --- */
+@media (min-width: 768px) {
+    h1 { font-size: 3.5em; }
+    h2 { font-size: 2.5em; }
+    .hero-content h1 { font-size: 4em; }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        text-align: left;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+    }
+    .footer-right {
+        text-align: right;
+    }
+}
+
+@media (min-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

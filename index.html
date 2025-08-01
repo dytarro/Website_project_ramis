@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermarkt Ramis - De Poolse Smaak in Nederland</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <img src="assets/logo-ramis.png" alt="Logo Supermarkt Ramis" class="logo">
+            <nav>
+                <img src="assets/flag-pl.svg" alt="Poolse Vlag" class="flag-icon">
+                <img src="assets/flag-nl.svg" alt="Nederlandse Vlag" class="flag-icon">
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Ramis: Dé Poolse Supermarkt voor de regio Delft, Pijnacker & Zoetermeer</h1>
+                <h2>De authentieke smaak van thuis, voor u klaargezet.</h2>
+                <p>Serdecznie Zapraszamy!</p>
+                <a href="#aanbiedingen" class="button-primary">Bekijk de Weekaanbiedingen</a>
+            </div>
+        </section>
+
+        <section id="aanbiedingen">
+            <div class="container">
+                <h2>Onze Aanbiedingen / Nasze Promocje</h2>
+                <div class="gazetka-container">
+                    <img src="assets/gazetka-mockup.jpg" alt="Weekaanbiedingen van Supermarkt Ramis">
+                </div>
+            </div>
+        </section>
+
+        <section id="click-and-collect">
+            <div class="container">
+                <h2>Bestel Online, Haal Af in de Winkel</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="assets/product-kielbasa.jpg" alt="Verse Witte Worst">
+                        <h3>Verse Witte Worst / Biała Kiełbasa</h3>
+                        <p class="price">€8.99 / kg</p>
+                        <button class="button-primary" data-action="show-popup">Bestel & Haal af</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="assets/product-image-2.jpg" alt="Product 2">
+                        <h3>Productnaam 2</h3>
+                        <p class="price">€5.49</p>
+                        <button class="button-primary" data-action="show-popup">Bestel & Haal af</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="assets/product-image-3.jpg" alt="Product 3">
+                        <h3>Productnaam 3</h3>
+                        <p class="price">€3.29</p>
+                        <button class="button-primary" data-action="show-popup">Bestel & Haal af</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="assets/product-image-4.jpg" alt="Product 4">
+                        <h3>Productnaam 4</h3>
+                        <p class="price">€12.99</p>
+                        <button class="button-primary" data-action="show-popup">Bestel & Haal af</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="traditie">
+            <div class="traditie-overlay"></div>
+            <div class="traditie-content">
+                <h2>Vier de Traditie met Ramis</h2>
+                <h3>De Feestdagen komen eraan! Bestel nu alvast uw complete Wigilia-pakket en vier een zorgeloze Kerst.</h3>
+                <a href="#contact" class="button-primary">Bekijk de Pakketten</a>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Openingstijden & Locatie / Godziny otwarcia i Lokalizacja</h2>
+                        <p><strong>Adres:</strong> Stationsstraat 48, 2641 GM Pijnacker</p>
+                        <p><strong>Openingstijden:</strong><br>
+                            Ma - Vr: 09:00 - 18:00<br>
+                            Za: 09:00 - 17:00<br>
+                            Zo: Gesloten
+                        </p>
+                        <p><strong>Contact:</strong> <a href="mailto:ramissupermarket@dmail.com">ramissupermarket@dmail.com</a></p>
+                    </div>
+                    <div class="contact-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2454.70773634563!2d4.42898941578918!3d52.01188397972054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5c5e5e3b8b1e1%3A0x4c2b97951063f5f3!2sStationsstraat%2048%2C%202641%20GM%20Pijnacker!5e0!3m2!1snl!2snl!4v1678886452135!5m2!1snl!2snl"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-left">
+                <p>&copy; 2025 Supermarkt Ramis. Alle rechten voorbehouden.</p>
+            </div>
+            <div class="footer-right">
+                <p style="font-size: 0.8em; opacity: 0.7;">Dit is een vrijblijvend website-voorstel, met zorg gemaakt door Rick.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="popup-modal" class="modal-hidden">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <p>Deze functie is direct beschikbaar na de lancering van de website en stelt u in staat om uw boodschappen eenvoudig online te reserveren.</p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
