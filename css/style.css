@@ -96,6 +96,7 @@ header nav {
     display: flex;
     align-items: center;
     gap: 15px;
+    position: relative; 
 }
 
 .flag-icon {
@@ -333,3 +334,67 @@ footer::before {
         grid-template-columns: repeat(4, 1fr);
     }
 }
+
+/* --- Language Pop-up --- */
+#language-popup {
+    position: absolute;
+    top: 50%;
+    right: calc(100% + 15px); /* Naast de vlaggen, met 15px marge */
+    transform: translateY(-50%);
+    background-color: var(--text-color);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    z-index: 1001;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    width: max-content; /* Zorgt dat de pop-up niet onnodig breed wordt */
+}
+
+#language-popup.language-popup-hidden {
+    display: none; /* Verbergt het element volledig als het niet zichtbaar is */
+}
+
+#language-popup p {
+    margin: 0;
+    font-size: 0.9em;
+    white-space: nowrap; /* Voorkomt dat de tekst breekt */
+}
+
+#close-language-popup {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+    opacity: 0.7;
+}
+
+#close-language-popup:hover {
+    opacity: 1;
+}
+
+/* Pijltje naar rechts */
+#language-popup .popup-arrow {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -10px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid var(--text-color);
+}
+
+.language-popup-visible {
+    opacity: 1 !important;
+    transform: translateY(-50%) translateX(0) !important;
+}
+
